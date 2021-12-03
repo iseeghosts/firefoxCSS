@@ -1,0 +1,129 @@
+/*AGENT_SHEET*/
+/************************************/
+/****** contextMenus START ******/
+
+/**********************************************
+   Modify these files themselves to your needs.
+   Do not modify the following @import block.
+   **********************************************/
+
+/*** When right-clicking on... ***/
+@import url("./contextMenus/blank-context.css");      /* ...a blank area on a webpage                    */
+@import url("./contextMenus/frame-context.css");      /* ...an iframe                                    */
+@import url("./contextMenus/image-context.css");      /* ...an image                                     */
+@import url("./contextMenus/input-context.css");      /* ...an input-field                               */
+@import url("./contextMenus/link-context.css");       /* ...a link                                       */
+@import url("./contextMenus/main-hamburger.css");     /* Leftclick the hamburger menu on top right       */
+@import url("./contextMenus/main-menubar.css");       /* Leftclick on main menubar (open with ALT key)   */
+@import url("./contextMenus/media-context.css");      /* ...media like audio or html5 video              */
+@import url("./contextMenus/select-context.css");     /* ...selected text or selected object             */
+@import url("./contextMenus/sidebar-context.css");    /* ...items in bookmarks- or history sidebar       */
+@import url("./contextMenus/sidebar-header.css");     /* Leftclick on sidebar header                     */
+@import url("./contextMenus/source-context.css");     /* ...a blank area when viewing source code        */
+@import url("./contextMenus/tab-context.css");        /* ...a tab                                        */
+@import url("./contextMenus/toolbar-context.css");    /* ...the toolbar or tabbar                        */
+@import url("./contextMenus/urlbar-context.css");     /* ...the addressbar                               */
+
+
+/*** Options ***/
+
+/**********************************************************
+   How to activate or deactivate the following options:
+   Remove '/*' at the beginning of a line (not comment line) to activate the option
+   Add '/*' at the beginning of the line (not comment line) to deactivate the option
+   **********************************************************/
+
+/*** Hide all "Send <item> to Device" entries ***/
+/* @import url("./contextMenus/opt_noSendToDevice.css");
+
+/*** Hide all inactive menu items ***/
+/* #mainPopupSet menuitem[disabled="true"] { display: none !important; } */
+/****** contextMenus END ******/
+/**********************************/
+/* Makes panels, menupopups, urlbar and searchbar rounded */
+
+
+/* Modify the rounding size here */
+
+:root
+   {
+      --uc-menupopup-border-radius: 20px;
+      --tab-min-height: 30px !important;
+      --lwt-selected-tab-background-color: rgba(3, 26, 26, 0.98) !important;
+   }
+
+
+panel[type="autocomplete-richlistbox"], .panel-arrowcontent
+   {
+      -moz-appearance: none !important;
+      overflow: -moz-hidden-unscrollable !important;
+   }
+
+
+/* The rounding is also applied to searchbar and urlbar to look consistent */
+
+#urlbar-background
+   {
+      border-radius: var(--uc-menupopup-border-radius) !important;
+      background: rgb(14, 48, 48) !important;
+   }
+   searchbar#searchbar {background: rgb(14, 48, 48) !important; border-radius: 10px !important;}
+
+
+/* Reposition the panel-arrow */
+
+panel[type="arrow"]{ margin-inline-end: calc(-10px - var(--uc-menupopup-border-radius)) !important; }
+
+.panel-arrow{ margin-inline: var(--uc-menupopup-border-radius) !important; }
+
+
+
+/* Center URL bar text */
+
+#urlbar-input
+   { 
+      /* text-align: center !important;
+      justify-content: center;
+      align-items: center; */
+      color: white;
+   }
+
+#urlbar {
+   padding-left: 10px !important;
+   padding-right: 10px !important;
+}
+
+#urlbar-container { max-width: 800px !important; }
+
+/* #PopupAutoCompleteRichResult,
+  #urlbar-results {
+    width: 800px !important;
+    max-width: 800px !important;
+    margin-left: 0 !important;
+  } */
+
+  #PopupAutoCompleteRichResult {
+   border: 0px !important;
+   border-radius: 0px !important;
+   }
+
+
+* {
+   font-family: "Cascadia Code" !important;
+}
+
+#toolbar-menubar, #TabsToolbar {background-color: rgb(14, 48, 48) !important;}
+
+menupopup
+   {
+      --menuitem-hover-background-color: rgba(182, 201, 201, 0.205) !important;
+      --menu-background-color: rgba(3, 26, 26, 0.98) !important;
+      --menu-color: #ffffff !important;
+      --menu-disabled-color: rgba(255, 255, 255, 0.39) !important;
+   }
+
+#nav-bar, #PersonalToolbar{ background-color: rgba(71, 141, 141) !important }
+
+.toolbarbutton-1 {
+   --toolbarbutton-hover-background: rgba(3, 26, 26, 0.705) !important;
+ }

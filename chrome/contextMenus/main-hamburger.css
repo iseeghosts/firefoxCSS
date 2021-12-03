@@ -1,0 +1,114 @@
+/*AGENT_SHEET*/
+
+/*********************************************************************************************
+  simpleMenuWizard: Firefox 89+ userChrome.css tweaks to remove context menu items.
+  https://github.com/stonecrusher/simpleMenuWizard
+**********************************************************************************************
+
+/*** main-hamburger.css ***/
+
+#appMenu-fxa-separator,                            /*********** Separator ***********/
+#appMenu-new-tab-button2,                          /* New Tab                       */
+#appMenu-new-private-window-button2,               /* New Private Window            */
+#panelMenuBookmarkThisPage,                            /* Bookmark Current Tab          */
+#appMenu-extensions-themes-button,                 /* Add-ons and Themes            */
+#appMenu-print-button2,                            /* Print…                        */
+#appMenu-zoom-controls2,                           /* Zoom                          */
+ #appMenu-zoom-controls2 + toolbarseparator,        /*********** Separator ***********/
+#appMenu-save-file-button2,                        /* Save Page As…                 */
+#appMenu-find-button2,                             /* Find In Page…                 */
+#appMenu-more-button2,                             /* More Tools                    */
+#appMenu-help-button2,                             /* Help                          */
+#appMenu-extensions-themes-button
+       + toolbarseparator,                            /*********** Separator ***********/
+ #appMenu-help-button2 + toolbarseparator,          /*********** Separator ***********/
+#appMenu-quit-button2,                             /* Exit                          */
+#leave_this_dummy_here
+    {
+       display:none !important;
+       }
+
+#appMenu-proton-update-banner,                     /* Downloading Firefox update / 
+                                                        Update available — download now / 
+                                                        Unable to update — system incompatible / 
+                                                        Update available — restart now */
+#appMenu-fxa-status2,                              /* Sync and save data / Sign In  */
+#appMenu-new-window-button2,                       /* New Window                    */
+/* #appMenu-new-private-window-button2
+       + toolbarseparator,                            /*********** Separator ***********/
+#appMenu-bookmarks-button,                         /* Bookmarks                     */
+#panelMenu_searchBookmarks,                            /* Search Bookmarks              */
+#panelMenu_viewBookmarksToolbar,                       /* Show Bookmarks Toolbar        */
+/* #panelMenu_viewBookmarksToolbar + toolbarseparator,    /*********** Separator ***********/
+#panelMenu_recentBookmarks,                            /* Recent Bookmarks (label)      */
+#panelMenu_bookmarksMenu,                              /* Recent Bookmarks (list)       */
+#panelMenu_showAllBookmarks,                           /* Manage Bookmarks              */
+#appMenu-history-button,                           /* History                       */
+#appMenuRecentlyClosedTabs,                            /* Recently Closed Tabs          */
+#appMenu-library-recentlyClosedTabs > .restoreallitem,     /* Reopen All Tabs               */
+#appMenuRecentlyClosedWindows,                         /* Recently Closed Windows       */
+#appMenuRestoreSession,                                /* Restore Previous Session      */
+/* #appMenuRestoreSession + toolbarseparator,             /*********** Separator ***********/
+#appMenuClearRecentHistory,                            /* Clear Recent History…         */
+/* #appMenuClearRecentHistory + toolbarseparator,         /*********** Separator ***********/
+#panelMenu_recentHistory,                              /* Recent History (label)        */
+#appMenu_historyMenu,                                  /* Recent History (list)         */
+/* #appMenu_historyMenu + toolbarseparator,               /*********** Separator ***********/
+#PanelUI-historyMore,                                  /* Manage History                */
+#appMenu-downloads-button,                         /* Downloads                     */
+#appMenu-passwords-button,                         /* Passwords                     */
+#appMenu-settings-button,                          /* Settings                      */
+#appmenu-moreTools-button,                             /* Customize Toolbar…            */
+/* #appmenu-moreTools-button + toolbarseparator,          /*********** Separator ***********/
+#appmenu-developer-tools,                              /* Browser Tools (label)         */
+#appmenu-developer-tools-view
+       > toolbarbutton[key="key_toggleToolbox"],          /* Web Developer Tools           */
+#appmenu-developer-tools-view
+       > toolbarbutton[oncommand="switchToTabHavingURI('about:performance', true)"],
+                                                          /* Task Manager                  */
+#appmenu-developer-tools-view 
+       > toolbarbutton[oncommand="switchToTabHavingURI('about:performance', true)"]
+       + toolbarbutton[label*="Debug"],                   /* Remote Debugging              */
+#appmenu-developer-tools-view 
+       > toolbarbutton[key="key_browserToolbox"],         /* Browser Toolbox               */
+#appmenu-developer-tools-view 
+       > toolbarbutton[key="key_browserToolbox"]
+       + toolbarbutton[label*="Browser"],                 /* Browser Content Toolbox       */
+#appmenu-developer-tools-view 
+       > toolbarbutton[key="key_browserConsole"],         /* Browser Console               */
+#appmenu-developer-tools-view 
+       > toolbarbutton[key="key_responsiveDesignMode"],   /* Responsive Design Mode        */
+#appmenu-developer-tools-view 
+       > toolbarbutton[key="key_responsiveDesignMode"]
+       + toolbarbutton,                                   /* Eyedropper                    */
+#appmenu-developer-tools-view
+       > toolbarbutton[key="key_viewSource"],             /* Page Source                   */
+#appmenu-developer-tools-view
+       > toolbarbutton[key="key_viewSource"]
+       + toolbarbutton,                                   /* Extensions for Developers     */
+#PanelUI-helpItems > #appMenu_menu_openHelp,           /* Get Help                         */
+#PanelUI-helpItems > #appMenu_feedbackPage,            /* Submit Feedback…                 */
+#PanelUI-helpItems > #appMenu_helpSafeMode,            /* Troubleshoot Mode…               */
+#PanelUI-helpItems > #appMenu_troubleShooting,         /* More Troubleshooting Information */
+#PanelUI-helpItems > #appMenu_help_reportSiteIssue,    /* Report Site Issue…               */
+#PanelUI-helpItems > #appMenu_menu_HelpPopup_reportPhishingtoolmenu,  /* Report Deceptive Site…           */
+#PanelUI-helpItems > #appMenu_aboutName,               /* About Firefox                    */
+
+
+#Just_exp
+ {
+        font-family: 'Cascadia Mono';
+        font-weight: lighter;
+        font-size: 13px !important;
+        padding: 5px !important;
+        min-width: 80px;
+ }
+
+ .panel-subview-body {
+        color: rgb(255, 255, 255) !important;
+}
+
+.panel-subview-footer,
+[class^="PanelUI-"] {
+	background: rgba(3, 26, 26, 0.98) !important;
+}
